@@ -1,21 +1,20 @@
-﻿using Common;
-using Common.Entities;
-using Common.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Diagnostics;
-using System.Security.Cryptography;
-using System.Text;
-using System.Web;
-
-namespace JourEtNuit.Services
+﻿namespace JourEtNuit.Services
 {
+    #region usings
+    using Common;
+    using Common.Entities;
+    using Common.Helpers;
+    using System;
+    using System.Collections.Generic;
+    using System.Security.Cryptography;
+    using System.Text;
+    using System.Web;
+    #endregion
+
     public static class AuthentificationService
     {
         public static void RegisterUser(string name, string password, int userRoleId)
         {
-            User dbUser = null;
             using (SqlConnector connector = new SqlConnector())
             {
                 byte[] byteSalt = ASCIIEncoding.ASCII.GetBytes(StringHelper.GetRandomString(15));
