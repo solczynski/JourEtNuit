@@ -1,0 +1,16 @@
+﻿body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#header {
+  background: #0094ff;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+}
+#site-actions {
+  color: orangered;
+}
+@page {
+  size: landscape;
+  page-break-after: always;
+}

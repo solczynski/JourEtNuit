@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frontoffice.Master.cs" Inherits="JourEtNuit.MasterPages.front" %>
+
+<%@ Register Src="~/UserControls/TopMenu.ascx" TagPrefix="jnUC" TagName="TopMenu" %>
+
+
+<!DOCTYPE html moznomarginboxes mozdisallowselectionprint>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../css/front.css" rel="stylesheet" />
+    <link href="https://www.fontify.me/wf/7bae42fd1c8fda1f0552c7c963d44211" rel="stylesheet" type="text/css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="globalform" runat="server">
+        <div id="header">
+            <div>
+                Bonjour
+                <asp:Label runat="server" ID="lbl_UserName" />
+            </div>
+            <div>
+                Role :
+                <asp:Label runat="server" ID="lbl_UserRole" />
+            </div>
+            <jnUC:TopMenu runat="server" id="TopMenu" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="content" runat="server" />
+        </div>
+        <div id="footer"></div>
+    </form>
+</body>
+</html>
